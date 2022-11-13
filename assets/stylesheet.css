@@ -1,0 +1,116 @@
+@font-face {
+    font-family: britannic-bold-regular;
+    src: url(britanic.ttf);
+
+    font-family: bahnschrift;
+    src: url(bahnschrift.ttf);
+}
+
+.page-accueil {
+    
+    color:rgb(154, 22, 22);
+    background-color:rgb(235, 221, 198);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-image:url(fond_beige.jpg);
+    /* background-position: center, 150px;
+    height: 756px; */
+    /* max-width: 500px; */
+    /* margin:0; */ */
+    }
+
+video{
+    padding-top: 10px;
+    max-width: 130% !important;
+    max-height: 100% !important;
+
+}
+
+.page-false {
+    background-color:rgb(235, 221, 198);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-image:url(faux_rouge.png);
+}
+
+.page-final {
+    background-color:rgb(235, 221, 198);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-image:url(final_vert.png);
+}
+
+.page-true {
+    color:rgb(154, 22, 22);
+    background-color:rgb(235, 221, 198);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-image:url(fond_beige.jpg);
+}
+
+.button-home img{
+    width: 100px;  
+}
+
+h1  {
+    font-family: 'britannic-bold-regular', sans-serif !important;
+    font-size: 22px ;
+}
+
+p {
+    font-family: 'bahnschrift', sans-serif !important;
+    font-size: 20px ;
+}
+
+.answer-button {
+    font-family: 'bahnschrift', sans-serif !important;
+    font-size: 17px ;
+    background: url('bouton-b.png') no-repeat !important;
+    background-size: cover !important;
+    /* background-size: 100%; */
+    /* padding: 2px 8px; */
+    }
+.btn-size {
+    width: 400px;
+}
+
+.answer-size {
+    width: 400px;
+    padding-top: 200px;
+    margin: auto;
+}
+
+.answer-button-1 {
+    /* font-family: 'bahnschrift', sans-serif !important;
+    font-size: 17px ; */
+    background: url('1-rep-A.png')  !important;
+    /* background-size: cover !important; */
+    /* background-size: 10%; */
+    background-size: 400px;
+            width: 300px;
+            height: 200px;
+    /* padding: 2px 8px; */
+    }
+
+    /* button {
+        font-family: 'bahnschrift', sans-serif !important;
+        font-size: 17px ;
+        background: url('bouton-b.png') no-repeat !important;
+        background-size: cover !important;
+        /* background-size: 100%; */
+        /* padding: 2px 8px; */
+        /*} */
+
+.question-zone {
+    position: relative;
+    padding-top: 350px;
+    /* padding-left: 40px; */
+    /* height: 100px; */
+    background: url('1-question.png') no-repeat center !important;
+    background-size: 30% !important;
+    background-position: center;
+}
+
+.answer-zone {
+    padding-top: 350px;
+}

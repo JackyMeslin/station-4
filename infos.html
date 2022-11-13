@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>MUSEOMIX 2022 - Charles Léandre - Musée de Vire - Normandie</title>
+    <!-- integration tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <!-- apple mobile web app capable -->
+    <script type="text/javascript">
+		(function(document,navigator,standalone) {
+			// prevents links from apps from oppening in mobile safari
+			// this javascript must be the first script in your <head>
+			if ((standalone in navigator) && navigator[standalone]) {
+				var curnode, location=document.location, stop=/^(a|html)$/i;
+				document.addEventListener('click', function(e) {
+					curnode=e.target;
+					while (!(stop).test(curnode.nodeName)) {
+						curnode=curnode.parentNode;
+					}
+					// Condidions to do this only on links to your own app
+					// if you want all links, use if('href' in curnode) instead.
+					if(
+						'href' in curnode && // is a link
+						(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
+						(	!(/^[a-z\+\.\-]+:/i).test(chref) ||                       // either does not have a proper scheme (relative links)
+							chref.indexOf(location.protocol+'//'+location.host)===0 ) // or is in the same protocol and domain
+					) {
+						e.preventDefault();
+						location.href = curnode.href;
+					}
+				},false);
+			}
+		})(document,window.navigator,'standalone');
+	</script>
+</head>
+<body class="page-accueil">
+    
+	<div class="answer-size grid place-content-center">
+		<p>Cliquez sur le texte pour lancer la narration</p>
+		
+	</div>
+	
+
+<!-- <div class="video-zone pl-20 absolute flex  justify-center h-screen">
+	<object data="assets/charles-te-parle.mov" type="video/quicktime"  width="525" height="600">
+		<param name="filename" value="assets/charles-te-parle.mov" />  
+		<param name="autostart" value="true" />  
+		<param name="loop" value="false" />   -->
+		<!-- Texte alternatif  -->
+		 <!-- <embed type="video/quicktime" 
+					 src="assets/charles-te-parle.mov"
+					 width="400" height="600" AutoStart="true">
+		 </embed>
+	  </object> -->
+<!-- </div> -->
+<div class="relative flex pt-4 justify-center ">
+	<video autoplaypreload="auto" id="idvideo" onclick="fctPlay('idvideo')">
+		<source src="assets\rue_des_nations_infos.mp4" type="video/mp4">
+		
+	  Your browser does not support the video tag.
+	  </video> 
+</div>
+
+	<div class="flex items-center justify-center h-screen">
+		<!-- Using utilities:
+		<div class="p-4 absolute bottom-0 h-16 grid grid-cols-1 place-items-center">
+			<div class="flex items-center justify-center h-screen"> -->
+				<!-- Using utilities: -->
+				<div class="button-home p-8 absolute bottom-20 h-16 grid grid-cols-1 place-items-center">
+					<a href="final.html">
+						<img src="assets/suite.png" alt="">
+					</a>
+				</div>
+			
+	</div>
+
+	<script>
+		function fctAutoplay(sIdVideo){
+		  var oVideo = document.getElementById(sIdVideo);
+		  oVideo.autoplay = true;
+		}//fct 
+		
+		function fctPlay(sIdVideo){
+		  var oVideo = document.getElementById(sIdVideo);
+		  var playPromise = oVideo.play();
+		
+		  if (playPromise !== undefined) {
+			playPromise.then(function() {
+			  //  
+			}).catch(function(error) {
+			  var oDetect = document.getElementById("detect"+sIdVideo);
+			  if(oDetect){
+				oDetect.innerHTML = "(on la détecté en javascript que la vidéo ne c'est pas lancée)";
+			  }
+			});
+		  }
+		}//fct 
+		
+		document.addEventListener('DOMContentLoaded',function(){
+		  fctAutoplay('idvideo');
+		});
+		</script>
+</body>
+</html>
