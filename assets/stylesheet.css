@@ -7,23 +7,11 @@
 }
 
 .page-accueil {
-    
     color:rgb(154, 22, 22);
     background-color:rgb(235, 221, 198);
     background-repeat: no-repeat;
     background-size: 100% ;
     background-image:url(fond_beige_2.png);
-    /* background-position: center, 150px;
-    height: 756px; */
-    /* max-width: 500px; */
-    /* margin:0; */ */
-    }
-
-video{
-    padding-top: 10px;
-    max-width: 130% !important;
-    max-height: 100% !important;
-
 }
 
 .page-false {
@@ -46,6 +34,12 @@ video{
     background-repeat: no-repeat;
     background-size: 100% ;
     background-image:url(fond_beige_2.png);
+}
+
+video {
+    padding-top: 10px;
+    max-width: 130% !important;
+    max-height: 100% !important;
 }
 
 .button-home img{
